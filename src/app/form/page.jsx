@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react"
-import { getPost } from "../lib/serverActions"
+import { getPost } from "../../lib/serverActions"
 
 const page = () => {
     const [inputValue, setInputValue] = useState("")

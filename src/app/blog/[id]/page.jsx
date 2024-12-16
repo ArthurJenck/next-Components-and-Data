@@ -1,4 +1,4 @@
-import { getPost } from "@/app/lib/serverActions"
+import { getPost } from "@/lib/serverActions"
 import Link from "next/link"
 import React from "react"
 

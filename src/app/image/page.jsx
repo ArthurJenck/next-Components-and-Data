@@ -1,5 +1,5 @@
 import React from "react"
-import { getImg } from "../lib/serverActions"
+import { getImg } from "../../lib/serverActions"
 
 const page = async () => {
     const imgObject = await getImg()
