@@ -1,9 +1,12 @@
 import Link from "next/link"
 import React from "react"
-import { getPosts } from "../lib/serverActions"
+// import { getPosts } from "../lib/serverActions"
 
 const page = async () => {
-    const posts = await getPosts()
+    // const posts = await getPosts()
+    const posts = await fetch("http://localhost:3000/api/posts").then((res) =>
+        res.json()
+    )
 
     return (
         <main className="mt-12">
