@@ -1,9 +1,8 @@
 import React from "react"
+import { getImg } from "../lib/serverActions"
 
 const page = async () => {
-    const imgObject = await fetch(
-        "https://jsonplaceholder.typicode.com/photos/1"
-    ).then((res) => res.json())
+    const imgObject = await getImg()
 
     return (
         <div>
