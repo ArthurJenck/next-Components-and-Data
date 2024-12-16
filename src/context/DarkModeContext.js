@@ -6,7 +6,7 @@ export const DarkModeContext = createContext()
 export const DarkModeProvider = ({ children }) => {
     const [theme, setTheme] = useState("light")
     const toggleTheme = () => {
-        setTheme(!theme)
+        setTheme(theme === "light" ? "dark" : "light")
     }
 
     useEffect(() => {

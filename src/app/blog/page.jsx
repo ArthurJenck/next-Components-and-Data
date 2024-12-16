@@ -1,12 +1,12 @@
 import Link from "next/link"
 import React from "react"
-// import { getPosts } from "../lib/serverActions"
+import { getPosts } from "../../lib/serverActions"
 
 const page = async () => {
-    // const posts = await getPosts()
-    const posts = await fetch("http://localhost:3000/api/posts").then((res) =>
-        res.json()
-    )
+    const posts = await getPosts()
+    // const posts = await fetch("http://localhost:3000/api/posts").then((res) =>
+    //     res.json()
+    // )
 
     return (
         <main className="mt-12">
@@ -17,12 +17,12 @@ const page = async () => {
                     <Link
                         href={`/blog/${post.id}`}
                         key={post.id}
-                        className="block p-4 bg-white shadow-lg rounded-lg hover:bg-gray-100 transition duration-200"
+                        className="block p-4 bg-white shadow-lg rounded-lg hover:bg-gray-100 transition duration-200 dark:bg-gray-700 dark:hover:bg-gray-800"
                     >
                         <h2 className="text-xl font-semibold mb-2">
                             {post.title}
                         </h2>
-                        <p className="text-gray-600">
+                        <p className="text-gray-600 dark:text-gray-300">
                             {post.body.slice(0, 100) + "..."}
                         </p>
                     </Link>
